@@ -1,5 +1,5 @@
 'use strict';
 
 const plain = arrays => arrays.reduce(
-  (a, b) => a.concat(Array.isArray(b) ? plain(b) : b), []
+  (accumulator, currentValue) => accumulator.concat(Array.isArray(currentValue) ? plain(currentValue) : currentValue), []
 );
